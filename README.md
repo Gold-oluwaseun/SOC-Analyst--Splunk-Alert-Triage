@@ -57,33 +57,31 @@ I reviewed the alert details and searched Splunk using the URL to locate the cor
 
 The firewall logs confirmed that the outbound connection attempt was blocked.
 
-I also checked the URL using a threat intelligence platform. Interestingly, the result showed a **CLEAN** reputation, despite the suspicious phishing activity identified during the investigation.
-
-The clean result did not override the other investigation findings.
+I also checked the URL using a threat intelligence platform. Interestingly, the result showed a **CLEAN** reputation, despite the phishing activity identified during the investigation.
 
 ### Investigation Outcome
 
-The alert was classified as a **True Positive** because the URL was associated with a phishing attempt. The phishing message impersonated Amazon using the suspicious sender domain `urgentamazon.biz`. It created urgency by claiming that a package could not be delivered due to an incomplete address, encouraging the recipient to click an embedded Bitly shortened link.
+The alert was classified as a **True Positive** because the URL was associated with a phishing attempt. The phishing message impersonated the Amazon brand using the suspicious sender domain `urgentamazon.biz`. It created urgency by claiming that a package could not be delivered due to an incomplete address, encouraging the recipient to click an embedded Bitly shortened link.
 
 The firewall successfully blocked the attempted connection, preventing access to the external URL.
 
 ### Evidence
 
-**1. Alert details**
+**1. Alert Details**
 
 ![Alert 1 - Alert Details](screenshots/alert1-alert-details.png)
 
-**2. Splunk investigation — blocked connection**
+**2. Splunk Investigation — Blocked Connection**
 
-![Alert 1 - Splunk Blocked Event](screenshots/alert1-splunk-blocked.png)
+![Alert 1 - Splunk Blocked Connection](screenshots/alert1-splunk-blocked.png)
 
-**3. Threat intelligence — clean result**
+**3. Threat Intelligence — Clean Result**
 
 ![Alert 1 - Threat Intelligence Clean Result](screenshots/alert1-threat-intelligence-clean.png)
 
-**4. Incident investigation report**
+**4. Incident Investigation Report**
 
-![Alert 1 - Incident Report](screenshots/alert1-incident-report.png)
+![Alert 1 - Incident Investigation Report](screenshots/alert1-incident-report.png)
 
 ---
 
@@ -124,7 +122,7 @@ The alert was classified as a **True Positive** because the email contained clea
 
 The connection was allowed, potentially exposing the recipient to a phishing page designed to steal account credentials.
 
-**Important distinction:** An ALLOWED network connection does not confirm that the recipient successfully logged in to their Microsoft account or submitted credentials. Further investigation would be required to establish whether credentials were entered or the account was compromised.
+**Important:** An ALLOWED network connection does not confirm that the recipient successfully logged in to their Microsoft account or submitted credentials. Further investigation would be required to establish whether credentials were entered or the account was compromised.
 
 ### Reason for Escalation
 
@@ -141,15 +139,15 @@ The alert required escalation because the malicious URL was accessed and the fir
 
 ### Evidence
 
-**1. Alert details**
+**1. Alert Details**
 
 ![Alert 2 - Alert Details](screenshots/alert2-alert-details.png)
 
-**2. Splunk investigation — allowed connection**
+**2. Splunk Investigation — Allowed Connection**
 
-![Alert 2 - Splunk Allowed Event](screenshots/alert2-splunk-allowed.png)
+![Alert 2 - Splunk Allowed Connection](screenshots/alert2-splunk-allowed.png)
 
-**3. Threat intelligence — malicious URL**
+**3. Threat Intelligence — Malicious URL**
 
 ![Alert 2 - Malicious Threat Intelligence Result](screenshots/alert2-threat-intelligence-malicious.png)
 
@@ -181,7 +179,7 @@ The message requested that the recipient complete their onboarding profile throu
 
 I checked the URL using a threat intelligence platform, which returned a **CLEAN** result.
 
-I also reviewed the corresponding events in Splunk and examined the available event details. The investigation supported the URL being associated with the legitimate onboarding process rather than a phishing attempt.
+I also reviewed the corresponding events in Splunk and examined the full event details. The investigation supported the URL being associated with the legitimate onboarding process rather than a phishing attempt.
 
 ### Investigation Outcome
 
@@ -191,15 +189,15 @@ Although the alert flagged the external link for investigation, the available ev
 
 ### Evidence
 
-**1. Alert details**
+**1. Alert Details**
 
 ![Alert 3 - Alert Details](screenshots/alert3-alert-details.png)
 
-**2. Threat intelligence — clean URL**
+**2. Threat Intelligence — Clean URL**
 
 ![Alert 3 - Threat Intelligence Clean Result](screenshots/alert3-threat-intelligence-clean.png)
 
-**3. Full Splunk investigation — event details**
+**3. Full Splunk Investigation — Event Details**
 
 ![Alert 3 - Full Splunk Investigation](screenshots/alert3-splunk-full-details.png)
 
@@ -207,15 +205,13 @@ Although the alert flagged the external link for investigation, the available ev
 
 ## Additional Evidence — Closed Alerts Overview
 
-The screenshot below shows the list of alerts I successfully closed during the SOC simulation. It provides an overview of my alert triage activity beyond the three investigations documented above.
+The screenshot below shows the list of alerts I successfully closed during the SOC simulation, providing an overview of my alert management activity beyond the three investigations documented above.
 
 ![Closed Alerts Overview](screenshots/closed-alerts-overview.png)
 
 ---
 
 ## Lessons Learned
-
-These investigations reinforced several important SOC analysis principles:
 
 1. **A clean threat intelligence result does not guarantee safety.** Threat intelligence platforms rely on known indicators. New, unreported, or unclassified malicious URLs may still return clean results. Analysts must correlate threat intelligence with alert context and other available evidence.
 
@@ -249,7 +245,6 @@ It strengthened my understanding of how SOC analysts correlate email alerts, SIE
 
 **Author:** Oluwaseun Feyisayo Olatunji
 
-**LinkedIn:** [www.linkedin.com/in/oluwaseun-olatunji-b7790927b](https://www.linkedin.com/in/oluwaseun-olatunji-b7790927b)
-
+**LinkedIn:** [linkedin.com/in/oluwaseun-olatunji-b7790927b](https://www.linkedin.com/in/oluwaseun-olatunji-b7790927b)
 
 **Areas of Interest:** Cybersecurity | SOC Analysis | Blue Team | Security Operations
