@@ -70,25 +70,24 @@ The alert was treated as a True Positive based on the phishing-related activity 
 
 ### Alert Details
 
-![Alert 1 - Alert Details](screenshots/alert1-alert-details.png)
+![Alert 1 - Alert Details](alert1-alert-details.png)
 
 ### Splunk Investigation - Blocked Connection
 
-![Alert 1 - Splunk Blocked Connection](screenshots/alert1-splunk-blocked.png)
+![Alert 1 - Splunk Blocked Connection](alert1-splunk-blocked.png)
 
 ### Threat Intelligence - Clean Result
 
-![Alert 1 - Threat Intelligence Clean Result](screenshots/alert1-threat-intelligence-clean.png)
+![Alert 1 - Threat Intelligence Clean Result](alert1-threat-intelligence-clean.png)
 
 ### Incident Report
 
-![Alert 1 - Incident Report](screenshots/alert1-incident-report.png)
+![Alert 1 - Incident Report](alert1-incident-report.png)
 
 ---
 
 # Alert 2: Inbound Email — Microsoft Impersonation Phishing
 
-**Severity:** As provided by the simulator  
 **Classification:** True Positive  
 **Firewall Action:** ALLOWED
 
@@ -130,21 +129,20 @@ Further investigation of endpoint activity and account sign-in logs would be nec
 
 ### Alert Details
 
-![Alert 2 - Alert Details](screenshots/alert2-alert-details.png)
+![Alert 2 - Alert Details](alert2-alert-details.png)
 
 ### Splunk Investigation - Allowed Connection
 
-![Alert 2 - Splunk Allowed Connection](screenshots/alert2-splunk-allowed.png)
+![Alert 2 - Splunk Allowed Connection](alert2-splunk-allowed.png)
 
 ### Threat Intelligence - Malicious Result
 
-![Alert 2 - Threat Intelligence Malicious Result](screenshots/alert2-threat-intelligence-malicious.png)
+![Alert 2 - Threat Intelligence Malicious Result](alert2-threat-intelligence-malicious.png)
 
 ---
 
 # Alert 3: Inbound Email — Employee Onboarding Link
 
-**Severity:** As provided by the simulator  
 **Classification:** False Positive
 
 ## Alert Details
@@ -179,15 +177,15 @@ The alert was closed as a False Positive because the investigation did not ident
 
 ### Alert Details
 
-![Alert 3 - Alert Details](screenshots/alert3-alert-details.png)
+![Alert 3 - Alert Details](alert3-alert-details.png)
 
 ### Threat Intelligence - Clean Result
 
-![Alert 3 - Threat Intelligence Clean Result](screenshots/alert3-threat-intelligence-clean.png)
+![Alert 3 - Threat Intelligence Clean Result](alert3-threat-intelligence-clean.png)
 
 ### Splunk - Full Event Details
 
-![Alert 3 - Splunk Full Event Details](screenshots/alert3-splunk-full-details.png)
+![Alert 3 - Splunk Full Event Details](alert3-splunk-full-details.png)
 
 ---
 
@@ -195,7 +193,7 @@ The alert was closed as a False Positive because the investigation did not ident
 
 The screenshot below shows the overview of alerts that were investigated and closed during the exercise.
 
-![Closed Alerts Overview](screenshots/closed-alerts-overview.png)
+![Closed Alerts Overview](closed-alerts-overview.png)
 
 ---
 
